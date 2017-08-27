@@ -1,0 +1,23 @@
+{% extends 'layouts/application.html.twig' %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>Edit post</h1>
+
+    <form action="{{ path_for('posts.update', {id: post.id}) }}" method="post" autocomplete="off">
+      <div class="input-wrapper">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="{{ post.title }}">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="body">Body</label>
+        <textarea name="body" id="body" cols="30" rows="10">{{ post.body }}</textarea>
+      </div>
+      
+      <button type="submit" class="button">Update post</button>
+    </form>
+  </div>
+
+{% endblock %}

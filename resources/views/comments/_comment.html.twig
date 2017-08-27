@@ -1,0 +1,8 @@
+{% for comment in comments %}
+  <div class="comment">
+    <h4>{{ comment.author }}</h4>
+    <p>{{ comment.body }}</p>
+    <p>Posted on {{ comment.created_at | date }}</p>
+  </div>
+{% endfor %}
+

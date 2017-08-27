@@ -1,0 +1,13 @@
+<form action="{{ path_for('comments.create', { id: post.id }) }}" method="post" autocomplete="off">
+  <div class="input-wrapper">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author">
+  </div>
+
+  <div class="input-wrapper">
+    <label for="body">Body</label>
+    <textarea name="body" id="body" cols="30" rows="10"></textarea>
+  </div>
+
+  <button type="submit" class="button">Post comment</button>
+</form>

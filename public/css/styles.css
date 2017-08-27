@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1.5 'Raleway', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 80%;
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: .35rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+  padding: .8rem 1.8rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, color 0.2s ease-in;
+}
+
+.button:hover {
+  background: #bbb;
+}
+
+.input-wrapper:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  background: transparent;
+  border: 1px solid #bbb;
+  border-radius: .35rem;
+  margin-top: .5rem;
+  padding: .5rem;
+  width: 100%;
+}
+
+/* * * * * * * * * * Navbar Styles * * * * * * * * * */
+.navbar {
+  background: #333;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.logo {
+  color: #fff;
+  display: block;
+  float: left;
+  margin-right: 4rem;
+}
+
+.links {
+  float: left;
+}
+
+.auth {
+  float: right;
+}
+
+.links li,
+.auth li {
+  display: inline-block;
+}
+
+.links li:not(:first-child),
+.auth li:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.links li a,
+.auth li a {
+  color: #fff;
+}

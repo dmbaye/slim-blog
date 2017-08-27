@@ -1,0 +1,13 @@
+{% extends 'layouts/application.html.twig' %}
+
+{% block content %}
+  
+  <div class="container">
+    {% for post in results %}
+      <div class="result">
+        <h3><a href="{{ path_for('posts.show', { id: post.id }) }}" class="title">{{ post.title }}</a></h3>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

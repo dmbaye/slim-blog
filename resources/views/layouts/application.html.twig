@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="{{ base_url }}/css/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="{{ path_for('root') }}" class="logo">Blog</a>
+
+      <ul class="links">
+        <li><a href="{{ path_for('root') }}">All posts</a></li>
+      </ul>
+
+      <ul class="auth">
+        <li><a href="{{ path_for('posts.new') }}">Add post</a></li>
+        <li><a href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="search">
+    <div class="container">
+      <form action="{{ path_for('search') }}" method="get">
+        <label for="search">Search</label>
+        <input type="search" name="search" id="search" placeholder="Search a post...">
+      </form>
+    </div>
+  </div>
+
+  {% block content %}{% endblock %}
+
+  <script src="{{ base_url }}/js/main.js"></script>
+</body>
+</html>
